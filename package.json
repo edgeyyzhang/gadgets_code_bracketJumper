@@ -9,15 +9,258 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
     "commands": [
-      {
-        "command": "edge-bracket-jumper.helloWorld",
-        "title": "Hello World"
-      }
-    ]
+        {
+            "command": "bracket-jumper.jumpLeft",
+            "title": "Jump to next-left bracket"
+        },
+        {
+            "command": "bracket-jumper.jumpRight",
+            "title": "Jump to next-right bracket"
+        },
+        {
+            "command": "bracket-jumper.selectLeft",
+            "title": "Select to next-left bracket"
+        },
+        {
+            "command": "bracket-jumper.selectRight",
+            "title": "Select to next-right bracket"
+        },
+        {
+            "command": "bracket-jumper.ascendLeft",
+            "title": "Jump to nearest left bracket at same or higher scope"
+        },
+        {
+            "command": "bracket-jumper.selectAscendLeft",
+            "title": "Select to the nearest left bracket at the same or higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendRight",
+            "title": "Jump to the nearest right bracket at the same or higher scope"
+        },
+        {
+            "command": "bracket-jumper.selectAscendRight",
+            "title": "Select to the nearest right bracket at the same of higher scope"
+        }, 
+        {
+            "command": "bracket-jumper.ascendRightDQuote",
+            "title": "Ascend to the nearest right double quote at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendLeftDQuote",
+            "title": "Ascend to the nearest left double quote at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendRightDollar",
+            "title": "Ascend to the nearest right dollar at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendLeftDollar",
+            "title": "Ascend to the nearest left dollar at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectRightDQuote",
+            "title": "Select to the nearest right double quote at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectLeftDQuote",
+            "title": "Select to the nearest left double quote at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectRightDollar",
+            "title": "Ascend to the nearest right dollar at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectLeftDollar",
+            "title": "Ascend to the nearest left dollar at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendRightEq",
+            "title": "Select to the nearest equation at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendLeftEq",
+            "title": "Select to the nearest equation at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectRightEq",
+            "title": "Ascend to the nearest equation at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectLeftEq",
+            "title": "Ascend to the nearest equation at the same of higher scope"
+        },
+        {
+            "command": "bracket-jumper.myTabOut",
+            "title": "My Tab Out"
+        },
+        {
+            "command": "bracket-jumper.myTabIn",
+            "title": "My Tab In"
+        }
+    ],
+    "keybindings": [
+        {
+            "command": "bracket-jumper.jumpLeft",
+            "key": "ctrl+alt+left",
+            "mac": "ctrl+left",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.jumpRight",
+            "key": "ctrl+alt+right",
+            "mac": "ctrl+right",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.selectLeft",
+            "key": "ctrl+alt+shift+left",
+            "mac": "ctrl+shift+left",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.selectRight",
+            "key": "ctrl+alt+shift+right",
+            "mac": "ctrl+shift+right",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendLeft",
+            "key": "ctrl+alt+up",
+            "mac": "ctrl+up",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.selectAscendLeft",
+            "key": "ctrl+alt+shift+up",
+            "mac": "ctrl+shift+up",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendRight",
+            "key": "ctrl+alt+down",
+            "mac": "ctrl+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.selectAscendRight",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendRightDQuote",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendLeftDQuote",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendRightDollar",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendLeftDollar",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectRightDQuote",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectLeftDQuote",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectRightDollar",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectLeftDollar",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },			{
+            "command": "bracket-jumper.ascendRightEq",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendLeftEq",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectRightEq",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.ascendSelectLeftEq",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.myTabOut",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "bracket-jumper.myTabIn",
+            "key": "ctrl+alt+shift+down",
+            "mac": "ctrl+shift+down",
+            "when": "editorTextFocus"
+        }
+    ],
+    "configuration": {
+        "title": "Bracket Jumper configuration",
+        "properties": {
+            "bracket-jumper.openingBrackets": {
+                "type": "array",
+                "default": [
+                    "{",
+                    "[",
+                    "(",
+                    "<",
+                    "`"
+                ],
+                "description": "Characters to be recognized as opening brackets. MUST have a pair in closingBrackets."
+            },
+            "bracket-jumper.closingBrackets": {
+                "type": "array",
+                "default": [
+                    "}",
+                    "]",
+                    ")",
+                    ">",
+                    "'"
+                ],
+                "description": "Characters to be recognized as closing brackets. MUST have a pair in openingBrackets."
+            }
+        }
+    }
   },
   "scripts": {
     "lint": "eslint .",
@@ -34,5 +277,10 @@
     "mocha": "^10.2.0",
     "typescript": "^5.0.4",
     "@vscode/test-electron": "^2.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:EdgeRealm/edgeGadgets_code_bracketJumper.git"
+    },
+    "publisher": "edgeyyzhang"
 }
