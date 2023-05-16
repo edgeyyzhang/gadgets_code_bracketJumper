@@ -2,7 +2,7 @@
   "name": "edge-bracket-jumper",
   "displayName": "edge-bracket-jumper",
   "description": "edgeyy's adaption of sashaweiss's bracket jumper",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.78.0"
   },
@@ -12,10 +12,12 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "edge-bracket-jumper.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "edge-bracket-jumper.helloWorld",
+        "title": "Hello World"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
