@@ -75,7 +75,7 @@ function ascendLeft() {
 }
 exports.ascendLeft = ascendLeft;
 
-function ascendRight() {
+function ascendRight() { 
     let editor = vs.window.activeTextEditor;
     let document = editor.document;
     let cursors = []
