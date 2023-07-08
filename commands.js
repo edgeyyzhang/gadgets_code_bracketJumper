@@ -66,6 +66,9 @@ function ascendLeft() {
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
             selections[curInd] = newSelection;
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
+            selections[curInd] = newSelection;
         }            
     }
     editor.selections = selections
@@ -76,7 +79,7 @@ function ascendRight() {
     let editor = vs.window.activeTextEditor;
     let document = editor.document;
     let cursors = []
-    let selections = []
+    let selections = [];
     for (let curInd = 0; curInd < editor.selections.length; curInd++) {
         cursors[curInd] = editor.selections[curInd].active;
     }
@@ -86,7 +89,10 @@ function ascendRight() {
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
             selections[curInd] = newSelection;
-        }            
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
+            selections[curInd] = newSelection;
+        }     
     }
     editor.selections = selections
 }
@@ -153,6 +159,9 @@ function ascendRightDQuote() {
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
             selections[curInd] = newSelection;
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
+            selections[curInd] = newSelection;
         }            
     }
     editor.selections = selections
@@ -172,6 +181,9 @@ function ascendLeftDQuote() {
         let bracketPos = brackets.symbolInDir(document, curPos, "left", "\"");
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
+            selections[curInd] = newSelection;
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
             selections[curInd] = newSelection;
         }            
     }
@@ -193,6 +205,9 @@ function ascendRightDollar() {
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
             selections[curInd] = newSelection;
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
+            selections[curInd] = newSelection;
         }            
     }
     editor.selections = selections
@@ -212,6 +227,9 @@ function ascendLeftDollar() {
         let bracketPos = brackets.symbolInDir(document, curPos, "left", "$");
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
+            selections[curInd] = newSelection;
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
             selections[curInd] = newSelection;
         }            
     }
@@ -325,6 +343,9 @@ function ascendRightEq() {
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
             selections[curInd] = newSelection;
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
+            selections[curInd] = newSelection;
         }            
     }
     editor.selections = selections
@@ -344,6 +365,9 @@ function ascendLeftEq() {
         let bracketPos = brackets.symbolInDir(document, curPos, "left", "=");
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
+            selections[curInd] = newSelection;
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
             selections[curInd] = newSelection;
         }            
     }
@@ -411,6 +435,9 @@ function myTabOut() {
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
             selections[curInd] = newSelection;
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
+            selections[curInd] = newSelection;
         }            
     }
     editor.selections = selections
@@ -430,6 +457,9 @@ function myTabIn() {
         let bracketPos = brackets.tabOut(document, curPos, "left");
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
+            selections[curInd] = newSelection;
+        }  else {
+            let newSelection = new vs.Selection(curPos, curPos);
             selections[curInd] = newSelection;
         }            
     }
