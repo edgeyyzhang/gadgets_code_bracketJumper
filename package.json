@@ -2,7 +2,7 @@
   "name": "edge-bracket-jumper",
   "displayName": "edge-bracket-jumper",
   "description": "edgeyy's adaption of sashaweiss's bracket jumper",
-  "version": "1.0.1",
+  "version": "1.4.6",
   "engines": {
     "vscode": "^1.78.0"
   },
