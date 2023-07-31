@@ -435,12 +435,11 @@ function myTabOut() {
         if (bracketPos) {
             let newSelection = new vs.Selection(bracketPos, bracketPos);
             selections[curInd] = newSelection;
-        }  else {
-            let newSelection = new vs.Selection(curPos, curPos);
-            selections[curInd] = newSelection;
-        }            
+            editor.selections = selections
+        } else {
+            vs.commands.executeCommand("tab")
+        }
     }
-    editor.selections = selections
 }
 exports.myTabOut = myTabOut;
 

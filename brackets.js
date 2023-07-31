@@ -198,7 +198,6 @@ function tabOut(doc, pos, dir) {
     if ((RIGHT.indexOf(charAtPos(doc, pos))!=-1 || OTHERS.indexOf(charAtPos(doc, pos))!=-1)) {
         return posRight(doc, pos)
     }   
-    vs.commands.executeCommand("tab")
 }
 exports.tabOut = tabOut;
 
